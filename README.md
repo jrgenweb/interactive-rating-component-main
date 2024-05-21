@@ -25,7 +25,7 @@ Users should be able to:
 
 ### Screenshot
 
-![https://jrgenweb.github.io/](./screenshot.jpg)
+![https://jrgenweb.github.io/screenshot.webp](https://jrgenweb.github.io/screenshot.webp)
 
 ### Links
 
