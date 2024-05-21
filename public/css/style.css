@@ -1,4 +1,15 @@
 @import url("https://fonts.googleapis.com/css2?family=Overpass:ital,wght@0,100..900;1,100..900&display=swap");
+:root {
+  --br-radius: 15px;
+  --flow-s: 10px;
+  --flow-m: 1rem;
+  --flow-l: 1.5rem;
+  --padding: 1.5rem;
+  --fs-800: 1.5rem;
+  --fs-400: 14px;
+  --fs-body: 14px;
+}
+
 html {
   box-sizing: border-box;
   font-family: "Overpass";
@@ -14,7 +25,7 @@ html {
 }
 
 body {
-  font-size: 15px;
+  font-size: var(--fs-body);
   color: hsl(217, 12%, 63%);
   background-color: hsl(216, 12%, 8%);
   /*demo only*/
@@ -26,11 +37,11 @@ body {
 
 .rating {
   background: radial-gradient(#232a34, #181e27);
-  padding: 1.5rem;
+  padding: var(--padding);
   display: flex;
   flex-direction: column;
   max-width: 412px;
-  border-radius: 15px;
+  border-radius: var(--br-radius);
 }
 .rating .image {
   background-color: hsl(213, 19%, 18%);
@@ -45,15 +56,15 @@ body {
   justify-content: space-between;
 }
 .rating__select label {
-  font-size: 1rem;
+  font-size: var(--fs-400);
   font-weight: 700;
   letter-spacing: 0.2px;
   line-height: 1.5rem;
   background-color: hsl(213, 19%, 18%);
   border-radius: 50%;
   padding: 1rem;
-  width: 51px;
-  height: 51px;
+  width: 42px;
+  height: 42px;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -104,7 +115,7 @@ body {
 
 h1 {
   color: hsl(0, 0%, 100%);
-  font-size: 28px;
+  font-size: var(--fs-800);
   font-weight: 700;
 }
 
@@ -115,7 +126,7 @@ button {
   background-color: hsl(25, 97%, 53%);
   border-radius: 22.5px;
   padding: 14px;
-  font-size: 14px;
+  font-size: inherit;
   font-weight: 700;
   letter-spacing: 1.87px;
   line-height: 1;
@@ -132,16 +143,35 @@ p {
 
 /* flow */
 h1 {
-  margin-top: 1rem;
+  margin-top: var(--flow-m);
 }
 
 p {
-  margin-top: 10px;
+  margin-top: var(--flow-s);
 }
 
 .rating__select,
 button {
-  margin-top: 1.5rem;
+  margin-top: var(--flow-l);
+}
+
+@media (min-width: 37.5rem) {
+  :root {
+    --br-radius: 30px;
+    --padding: 2rem;
+    --flow-l: 2rem;
+    --fs-800: 28px;
+    --fs-400: 1rem;
+    --fs-body: 15px;
+  }
+  .rating .image {
+    width: 48px;
+    height: 48px;
+  }
+  .rating__select label {
+    width: 51px;
+    height: 51px;
+  }
 }
 
 /*# sourceMappingURL=style.css.map */
